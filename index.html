@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/pizza.png">
+    <title>Pizza Calculator</title>
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="tittle-card">
+          <h1>Pizza Calculator</h1>
+          <div class="toggle-switch">
+            <span class="toggle-text toggle-cm">cm</span>
+            <label class="switch">
+              <input type="checkbox" class="toggle">
+              <span class="slider"></span>
+            </label>
+            <span class="toggle-text toggle-in">in</span>
+          </div>
+        </div>
+        <div class="not-the-title">
+        <form id="pizza-form">
+          <div class="form-group">
+            <div class="input-group">
+              <span id="diameterUnits" class="input-group-addon">cm</span>
+              <input
+                type="number"
+                step=".001"
+                class="form-control"
+                id="diameter"
+                placeholder="Diameter"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input
+                type="number"
+                step=".01"
+                class="form-control"
+                id="price"
+                placeholder="Price"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-gorup">
+            <input type="submit" value="Calculate" class="btn" />
+          </div>
+        </form>
+        <div id="results">
+          <div class="input-group">
+                <span id="resultUnits" class="input-group-addon">$ per sq cm<sup>2</sup> </span>
+                <input
+                  type="number"
+                  step=".001"
+                  class="form-control"
+                  id="pricepersqr"
+                  disabled
+                />
+          </div>
+        </div>
+        <table id="table">
+          <thead>
+            <th id="Tdiameter">Diameter cm</th>
+            <th>Price</th>
+            <th id="pricePer">Price per cm<sup>2</sup></th>
+          </thead>
+          <tbody>
+
+          </tbody>
+          
+        </table>
+      </div>
+      </div>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+

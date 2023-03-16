@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-inactive: #c93253;
+  --color-active: #42d66a;
+}
+
+#results,
+#table {
+  display: none;
+}
+
+body {
+  background-color: var(--color-inactive);
+  font-family: "Yanone Kaffeesatz";
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: bisque;
+  height: 100vh;
+  width: 400px;
+}
+
+.tittle-card {
+  margin: 50px 50px 0px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.not-the-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#pizza-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  margin: 10px auto;
+  align-self: center;
+  background-color: var(--color-inactive);
+  width: 230px;
+  font-family: "Yanone Kaffeesatz";
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 38px;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 10px;
+  width: 100%;
+
+  /* box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.06); */
+}
+
+#diameter,
+#price,
+#pricepersqr {
+  border-radius: 0;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  /* margin-right: auto; */
+}
+
+.input-group span {
+  background-color: var(--color-active);
+  padding: 7px 5px;
+  width: 40px;
+  height: 38px;
+  text-align: center;
+  border-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  font-weight: bold;
+}
+
+#results .input-group span {
+  width: 150px;
+}
+
+/* Style the toggle switch container */
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+/* Style the toggle switch text */
+.toggle-text {
+  padding: 0 10px;
+  margin-bottom: 13px;
+  font-weight: bold;
+}
+
+/* Style the switch input */
+.switch input {
+  display: none;
+}
+
+/* Style the slider */
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: var(--color-inactive);
+  transition: background-color 0.3s;
+}
+
+/* Style the slider when active */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 2px;
+  bottom: 2px;
+  background-image: url("img/pizza.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.3s;
+}
+
+/* Style the switch when active */
+input:checked + .slider {
+  background-color: var(--color-active);
+}
+
+/* Style the slider when active */
+input:checked + .slider:before {
+  transform: translateX(20px) rotate(120deg);
+}
